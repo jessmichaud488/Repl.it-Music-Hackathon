@@ -1,0 +1,126 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: table;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container {
+  display: table-row;
+  height: 60%;
+}
+
+.container:nth-child(1) {
+  background: url("images/cassette.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 40%;
+  background-position: top;
+}
+
+.container:nth-child(2) {
+  background-color: #ddd;
+}
+
+#play-button {
+  background-image: url("images/play.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 48px;
+  height: 70px;
+  width: 70px;
+  margin-top: 42px;
+  margin-left: 900px;
+  position: absolute;
+  border: 2px double red;
+}
+
+#play-button:hover {background-color: darkred}
+
+#play-button:active {
+  background-color: darkred;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(.75px);
+}
+
+#pause-button {
+  background-image: url("images/pause.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 48px;
+  height: 70px;
+  width: 70px;
+  margin-top: 42px;
+  margin-left: 628px;
+  position: absolute;
+  border: 2px double red;
+}
+
+#pause-button:hover {background-color: darkred}
+
+#pause-button:active {
+  background-color: darkred;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(.75px);
+}
+
+#ff-button {
+  background-image: url("images/fast-forward.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 48px;
+  height: 35px;
+  width: 35px;
+  margin-top: 55px;
+  margin-left: 1024px;
+  position: absolute;
+  border: 2px double red;
+}
+
+#ff-button:hover {background-color: darkred}
+
+#ff-button:active {
+  background-color: darkred;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(.75px);
+}
+
+#back-button {
+  background-image: url("images/previous.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 48px;
+  height: 35px;
+  width: 35px;
+  margin-top: 55px;
+  margin-left: 540px;
+  position: absolute;
+  border: 2px double red;
+}
+
+#back-button:hover {background-color: darkred}
+
+#back-button:active {
+  background-color: darkred;
+  box-shadow: 0 2px darkgrey;
+  transform: translateY(.75px);
+}
+
+form {
+  margin-top: 75px;
+  margin-left: 575px;
+}
+
+input {
+  height: 25px;
+  width: 500px;
+  font-family: 'Faster One', cursive;
+  font-size: 36px;
+}
