@@ -119,6 +119,15 @@ form {
   margin-left: 560px;
 }
 
+#go-button {
+  background-color: white;
+  color: black;
+  height: 25px;
+  width: 50px;
+  font-family: 'Faster One', cursive;
+  font-weight: bold;
+}
+
 input {
   height: 25px;
   width: 500px;

@@ -8,20 +8,29 @@
     <link href="https://fonts.googleapis.com/css?family=Faster+One&display=swap" rel="stylesheet">
   </head>
   <body>
+  <audio id="cassetteAudio">
+  <source src="" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+</audio>
     <div class="container">
       <form>
-        <input type="text" name="songinfo" placeholder="Enter a song title">
+        <input id="entry-form" type="text" name="songinfo" placeholder="Enter a song title">
+        <button id="go-button" type="button">GO!</button>
       </form>
-       <button id="play-button"><img></button>
-       <button id="pause-button"><img></button>
+       <button id="play-button" onclick="playAudio()" type="button"><img></button>
+       <button id="pause-button" onclick="pauseAudio()" type="button""><img></button>
        <button id="ff-button"><img></button>
        <button id="back-button"><img></button>
 
     </div>
 
     <div class="container">
-      row 2<br /> lorem ipsum
+      <div id="search-results">
+        <ul>
+          <h2>Search Results</h2>
+          </ul>
     </div>
     <script src="api.js"></script>
+    <script src="player.js"></script>
   </body>
 </html>

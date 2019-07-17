@@ -1,3 +1,5 @@
+'use strict';
+
 function getBySong(result) {
 		var resultBySong = $.ajax({
 			url: `https://orion.apiseeds.com/api/music/search/${result.title}`,
@@ -21,20 +23,20 @@ function displayBySongResults(bySongArray) {
 
 	let buildBySong = "";
 
-	for (let i = 0; i < bySongArray.results.length; i++) {
+	for (let i = 0; i < bySongArray.result.length; i++) {
 		buildBySong +=
-			`<li><a href="#" data-id= ${bySongArray.results[i].id}>${bySongArray.results[i].name} ${bySongArray.results[i].party})</a></li>`;
+			`<li><a href="#" data-id= ${bySongArray.result[i].id}>${bySongArray.result[i].title} ${bySongArray.results[i].artist})</a></li>`;
 	}
 
-	$('#house ul').html(buildBySong);
+	$('#search-results').html(buildBySong);
 }
 
 function handleSearchSubmit() {
-	$('#rep-state-search').on('click', function (event) {
+	$('#go-button').on('click', function (event) {
 		event.preventDefault();
 
-		let result = $('#state-select').val();
-		$("#pick-rep").show();
+		let result = $('#entry-form').val();
+		$("#search-results").show();
 		getBySong(result);
 	});
 }
@@ -44,11 +46,7 @@ function init() {
 	//add all event listeners here
 	handleSearchSubmit();
   getBySong();
-	$("#pick-rep").hide();
-	$("#rep-results-section").hide();
-  $("#news-results-section").hide();
-  $(".newsfeed-header").hide();
 }
 
 //document on ready function
-$(init);
+//$(init);
