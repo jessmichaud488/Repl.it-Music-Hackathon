@@ -2,7 +2,7 @@
 
 function getBySong(result) {
 		var resultBySong = $.ajax({
-			url: `https://orion.apiseeds.com/api/music/search/${result.title}`,
+			url: `https://orion.apiseeds.com/api/music/search/?q=${result.title}`,
 			type: "GET",
 			dataType: 'json',
 			headers: {
